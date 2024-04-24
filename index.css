@@ -10,6 +10,17 @@
     scroll-behavior: smooth;
 }
 
+html {
+    height: 100%;
+}
+
+html, 
+body {
+    min-height: 100% !important;
+    height: 100%;
+    background-color: #151515;
+}
+
 
 /* --- Sidebar --- */
 
@@ -123,6 +134,7 @@ li a {
 /* --- Main --- */
 main {
     max-width: 80%;
+    /* height: 100%; */
     padding: 24px 40px;
     margin: 0 0 0 20%;
     background-color: #151515;
