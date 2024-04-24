@@ -1,0 +1,30 @@
+CRUD
+Deta - Bang Adit (ka Kris)
+
+Nama Web : -
+
+Bentuk data : [ {..}, {..}, ... ] Array Of Objects dengan key (id, name, category, year, img, link, actors) *Dummy data 5 buah
+
+Fitur : 
+    - Membuat data film (*3)
+        - Judul / nama film (key: name, string)
+        - Kategori film (key: category, string)
+        - Tahun pembuatan (key: year, number)
+        - Poster film (key: img, image)
+        - Trailer (key: link, link youtube)
+        - actors
+
+        - Semua data harus diisi*
+            - Ketika ada data kosong, tampilkan notif 
+
+    - Menampilkan semua data film (*1)
+        - Data film ditampilkan dalam bentuk card 
+        - Search (action button)
+            - Ketika keyword kosong tampilkan notif 
+        - Filter by category (opsional)
+
+    - Mengupdate data film (*4)
+        - Tampilkan data film sblm di edit
+
+    - Menghapus data film (*2)
+        - Confirmation button dengan nama film
