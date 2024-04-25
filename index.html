@@ -56,8 +56,9 @@
             <h2>Add Movie</h2>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
+          <a href="#formEdit"></a>
           <div class="form-area">
-            <form class="am-form">
+            <form id="formEdit" class="am-form">
               <!-- <input id="id" type="number" /> -->
               <label for="input-title">Movie Title</label>
               <input id="input-title" type="text" />
@@ -85,8 +86,10 @@
               <label for="input-link-img">Movie Poster (Image Link)</label>
 
               <input id="input-link-img" type="text" />
-              <button type="submit" id="submit-img">Submit</button>
             </form>
+            <button onclick="updateData()" type="submit" id="submit-img">
+              Update
+            </button>
             <button onclick="createMovie()" type="submit" id="submit-img">
               Submit
             </button>
