@@ -8,7 +8,7 @@ let datas = [
     link: "https://www.youtube.com/watch?v=2QKg5SZ_35I",
     actors: "Tom Cruise, Jenal",
     description:
-      "Jumanji adalah film thriller-fantasi Amerika Serikat yang dibuat pada tahun 1995. Disutradarai oleh Joe Johnston berdasarkan novel yang ditulis oleh Chris Van Allsburg pada tahun 1981. Film ini bercerita tentang sebuah permainan ajaib yang didalamnya terdapat binatang-binatang, dan binatang-binatang itu akan keluar jika tertera pada papan. Dan permainan akan usai jika salah satu dari pemain ada yang dapat mencapai titik Jumanji.",
+      "Film ini bercerita tentang sebuah permainan ajaib yang didalamnya terdapat binatang-binatang, dan binatang-binatang itu akan keluar jika tertera pada papan. Dan permainan akan usai jika salah satu dari pemain ada yang dapat mencapai titik Jumanji.",
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ let datas = [
     link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
     actors: "Shizuka, Nobita",
     description:
-      "Doraemon) adalah judul sebuah manga dan anime populer yang dikarang Fujiko F. Fujio (藤子・F・不二雄, nama asli: Hiroshi Fujimoto) sejak Desember 1969 dan berkisah tentang kehidupan seorang anak pemalas kelas 5 sekolah dasar yang bernama Nobita Nobi (野比のび太) yang didatangi oleh sebuah robot kucing bernama Doraemon yang datang dari abad ke-22. Doraemon dikirim untuk menolong Nobita agar keturunannya dapat menikmati kesuksesannya daripada harus menderita dari utang finansial yang akan terjadi pada masa depan yang disebabkan karena kebodohan Nobita.",
+      "Berkisah tentang kehidupan seorang anak pemalas kelas 5 sekolah dasar yang bernama Nobita Nobi (野比のび太) yang didatangi oleh sebuah robot kucing bernama Doraemon yang datang dari abad ke-22.",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ let datas = [
     link: "https://www.youtube.com/watch?v=a2cowVH03Xo",
     actors: "Spongebob, Patrick, Squidward",
     description:
-      "SpongeBob SquarePants (atau lebih dikenal sebagai SpongeBob saja) adalah seri animasi terpopuler di jaringan Nickelodeon. Pada awalnya seri animasi ini ditayangkan pada 1999 di Amerika Serikat dan diciptakan oleh almarhum Stephen Hillenburg, seorang animator dan ahli biologi laut, dan diterbitkan oleh perusahaannya, United Plankton Pictures Inc. Seri animasi ini berlatar di Samudra Pasifik, yaitu di kota fiksi Bikini Bottom.",
+      "SpongeBob SquarePants (atau lebih dikenal sebagai SpongeBob saja) adalah seri animasi terpopuler di jaringan Nickelodeon. Seri animasi ini berlatar di Samudra Pasifik, yaitu di kota fiksi Bikini Bottom.",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ let datas = [
     link: "https://www.youtube.com/watch?v=T0ki7KwvO1Q",
     actors: "Dono, Kasino, Indro",
     description:
-      "Warung Kopi, lebih dikenal dengan Warkop, sebelumnya bernama Warkop Prambors (1973-1985) dan Warkop DKI (1986-1997), merupakan grup lawak asal Indonesia yang dibentuk oleh Nanu Moeljono, Rudy Badil, Kasino Hadiwibowo, Wahjoe Sardono dan Indrodjojo Kusumonegoro, mereka pertama kali bertemu dalam program radio Obrolan Santai di Warung Kopi garapan Temmy Lesanpura, Kepala Bagian Programming Radio Prambors Rasisonia.",
+      "Warung Kopi, lebih dikenal dengan Warkop, sebelumnya bernama Warkop Prambors (1973-1985) dan Warkop DKI (1986-1997), merupakan grup lawak asal Indonesia yang dibentuk oleh Nanu Moeljono, Rudy Badil, Kasino Hadiwibowo, Wahjoe Sardono dan Indrodjojo Kusumonegoro.",
   },
   {
     id: 4,
@@ -52,6 +52,6 @@ let datas = [
     link: "https://www.youtube.com/watch?v=ZZGkV_xWGw4",
     actors: "Paul Walker, Vin Diesel",
     description:
-      " 2 Fast 2 Furious menceritakan kehidupan Brian O’Conner yang telah berhenti dari kepolisian dan kini mencari nafkah dari ajang balap mobil liar. Suatu malam, rekan Brian, seorang mekanik sekaligus promotor balap mobil liar memanggilnya dan menjadikannya salah satu peserta balap. Setelah menaikkan taruhan, Brian yang kini ahli dalam balap mobil berhasil memenangkan posisi pertama. Lalu, ia tampak mendekati seorang wanita cantik bernama Monica.",
+      "Menceritakan kehidupan Brian O’Conner yang kini mencari nafkah dari ajang balap mobil liar. Suatu malam, rekan Brian menjadikannya salah satu peserta balap. Setelah menaikkan taruhan, Brian yang kini ahli dalam balap mobil berhasil memenangkan posisi pertama.",
   },
 ];

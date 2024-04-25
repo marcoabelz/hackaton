@@ -83,11 +83,19 @@ li a {
     color: #f1f1f1;
 }
 
+/* --- Welcome Message --- */
+.container-1 h2,
+#name {
+    margin-right: auto;
+    font-size: 20px;
+    color: #f1f1f1;
+}
 
 /* --- Search bar --- */
 .container-1 {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    /* justify-content: end; */
     flex-direction: row;
     gap: 16px;
     margin-bottom: 32px;
@@ -139,7 +147,7 @@ main {
     /* height: 100%; */
     padding: 24px 40px;
     margin: 0 0 0 20%;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
 }
 
 
@@ -289,7 +297,7 @@ main {
     width: 100%;
     margin-top: 24px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .am-form {
@@ -342,7 +350,8 @@ textarea,
     color: #f1f1f1;
 }
 
-#submit-img {
+#update-data,
+#create-data {
     margin: 16px 0 8px;
     padding: 8px 10px;
     font-size: 16px;

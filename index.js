@@ -123,7 +123,7 @@ function createMovie() {
     !trailerValue ||
     !imageValue
   ) {
-    alert("Kosong");
+    alert("Mohon mengisi data yang kosong");
   } else {
     let tempObj = {
       id: datas[datas.length - 1].id + 1,
@@ -269,3 +269,31 @@ function deleted(id) {
     listMovies(temp);
   }
 }
+
+
+// Change Menu to Add Movie
+function hideDashboard() {
+  document.getElementById("add-movie-page").style.display = "block";
+  document.getElementById("main-container").style.display = "none";
+
+  document.getElementById("update-data").style.display = "none";
+}
+
+// Change Menu to Dashboard
+function hideAddMovie() {
+  document.getElementById("main-container").style.display = "block";
+  document.getElementById("add-movie-page").style.display = "none";
+}
+
+function showUpdate() {
+
+}
+
+
+// Replace Name
+function replaceName() {
+  let name = prompt("Halo! Siapa nama kamu?", "");
+  document.getElementById("name").innerHTML = name;
+} 
+
+// replaceName()

@@ -21,36 +21,39 @@
         <ul id="sidebar-ul">
           <li>
             <i class="bx bxs-dashboard" style="color: #f1f1f1"></i>
-            <a href="#">Dashboard</a>
+            <a href="#" id="dashboard" onclick="hideAddMovie()">Dashboard</a>
           </li>
           <li>
             <i class="bx bxs-plus-circle" style="color: #f1f1f1"></i>
-            <a href="#">Add Movie</a>
+            <a href="#" id="add-movie-menu" onclick="hideDashboard()">Add Movie</a>
           </li>
           <li>
             <i class="bx bxs-group" style="color: #f1f1f1"></i>
-            <a href="#">About Us</a>
+            <a href="#" id="about-us-menu">About Us</a>
           </li>
         </ul>
       </div>
     </aside>
     <main>
       <a href="" target="_blank"></a>
-      <div class="container-1">
-        <div class="container-search">
-          <input id="keyword" type="text" placeholder="Search here..." />
-          <button onclick="findMovies()" class="btn-search-bar" id="btn-search">
-            <i class="bx bx-search" style="color: #f1f1f1"></i>
+      <div class="main-container" id="main-container">
+        <div class="container-1">
+          <h2>Welcome, <span id="name">...</span>!</h2>
+          <div class="container-search">
+            <input id="keyword" type="text" placeholder="Search here..." />
+            <button onclick="findMovies()" class="btn-search-bar" id="btn-search">
+              <i class="bx bx-search" style="color: #f1f1f1"></i>
+            </button>
+          </div>
+          <button onclick="reset()" class="btn-search-bar" id="btn-reset">
+            Reset
           </button>
         </div>
-        <button onclick="reset()" class="btn-search-bar" id="btn-reset">
-          Reset
-        </button>
+        <div id="container" class="container-2">
+          <a href=""></a>
+        </div>
       </div>
-      <div id="container" class="container-2">
-        <a href=""></a>
-      </div>
-      <div class="add-movie-page">
+      <div class="add-movie-page" id="add-movie-page" style="display: none;">
         <div class="am-container-1">
           <div class="am-title-header">
             <h2>Add Movie</h2>
@@ -78,7 +81,7 @@
                 name="input-desc"
                 id="input-desc"
                 rows="5"
-                maxlength="290"
+                maxlength="265"
               ></textarea>
               <label for="input-trailer">Trailer (Youtube Link)</label>
               <input id="input-trailer" type="text" />
@@ -87,10 +90,10 @@
 
               <input id="input-link-img" type="text" />
             </form>
-            <button onclick="updateData()" type="submit" id="submit-img">
+            <button onclick="updateData()" type="submit" id="update-data">
               Update
             </button>
-            <button onclick="createMovie()" type="submit" id="submit-img">
+            <button onclick="createMovie()" type="submit" id="create-data">
               Submit
             </button>
           </div>
