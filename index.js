@@ -10,43 +10,69 @@
 let newDatas = null;
 
 // Selector
-let titleSelector = document.getElementById("title");
-let categorySelector = document.getElementById("category");
-let yearSelector = document.getElementById("year");
-let imgSelector = document.getElementById("img");
-let linkSelector = document.getElementById("link");
-let actorsSelector = document.getElementById("actors");
+// let titleSelector = document.getElementById("title");
+// let categorySelector = document.getElementById("category");
+// let yearSelector = document.getElementById("year");
+// let imgSelector = document.getElementById("img");
+// let linkSelector = document.getElementById("link");
+// let actorsSelector = document.getElementById("actors");
+// let descriptionSelector = document.getElementById("description");
+// let keywordInputSelector = document.getElementById("keyword");
 
 //harus terpanggil 1x ketika web di refresh
 listMovies(datas);
 
 // Read
 function listMovies(movies) {
-  let wadah = document.getElementById("wadah");
+  // let container = document.getElementsByClassName("container")[0];
+  let container = document.getElementById("container");
   let keyword = document.getElementById("keyword");
-  keyword.innerHTML = "";
-
-  wadah.innerHTML = "";
+  // keyword.innerHTML = "";
+  container.innerHTML = "";
 
   for (let perMovies of movies) {
-    let { id, name, category, year, img, link, actors } = perMovies;
+    let { id, name, category, year, img, link, actors, description } =
+      perMovies;
 
     let verString = "";
     for (let char of actors) {
       verString += `${char} `;
     }
 
-    wadah.innerHTML += `<div class="kartu">
-    <p id="title">${name}</p>
-    <p id="category">${category}</p>
-    <p id="year">${year}</p>
-    <img src="${img}" alt="${name}" />
-    <a href="${link}" target="_blank">Youtube ${name}</a>
-    <p id="actors">${verString}</p>
-    <button>Edit</button>
-    <button>Delete</button> 
-
-  </div><br><br>`;
+    container.innerHTML += `<div class="container-card">
+    <div class="card">
+      <div class="card-img">
+        <img src="${img}" alt="${name}" />
+      </div>
+      <div class="card-body">
+        <h3 id="title" class="card-body-title">${name}</h3>
+        <div class="card-group">
+          <span id="year" class="card-body-year">${year}</span><span> | </span
+          ><span id="category" class="card-body-category">${category}</span>
+        </div>
+        <p id="description" class="card-body-desc">
+          ${description}
+        </p>
+        <p id="actors" class="card-body-actor">${verString}</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <a
+        class="btn-watch"
+        id="btn-watch-trailer"
+        target="_blank"
+        href='${link}'"
+      >
+        <i class="bx bx-play-circle"></i>Watch Trailer
+      </a>
+      <button href="" class="btn-edit">
+        <i class="bx bx-edit-alt"></i>Edit
+      </button>
+      <button href="" class="btn-delete">
+        <i class="bx bx-trash"></i>Delete
+      </button>
+    </div>
+  </div>`;
   }
 }
 
@@ -65,14 +91,18 @@ function findMovies() {
   listMovies(result);
 }
 
-//RESET
+//Reset
 function reset() {
   listMovies(datas);
+  keywordInputSelector.value = "";
 }
 
+//Delete
 function deleted(id) {
-  if (newArray === null) {
+  console.log(id);
+  if (newDatas === null) {
     for (let data of datas) {
+      console.log(data);
     }
   } else {
     for (let data of newDatas) {
