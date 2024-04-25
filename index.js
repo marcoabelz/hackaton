@@ -3,6 +3,98 @@ let newDatas = null;
 //harus terpanggil 1x ketika web di refresh
 listMovies(datas);
 
+function editMovie(id) {
+  localStorage.setItem("editID", String(id));
+
+  // let idSelector = document.getElementById("id");
+  let titleSelector = document.getElementById("input-title");
+  let categorySelector = document.getElementById("input-category");
+  let yearSelector = document.getElementById("input-year");
+  let castSelector = document.getElementById("input-cast");
+  let descSelector = document.getElementById("input-desc");
+  let trailerSelector = document.getElementById("input-trailer");
+  let imageSelector = document.getElementById("input-link-img");
+
+  for (let data of datas) {
+    console.log(data);
+    if (data.id === id) {
+      titleSelector.value = data.name;
+      categorySelector.value = data.category;
+      yearSelector.value = data.year;
+      castSelector.value = data.actors;
+      descSelector.value = data.description;
+      trailerSelector.value = data.link;
+      imageSelector.value = data.img;
+    }
+  }
+}
+
+function updateData() {
+  let currentId = Number(localStorage.getItem("editID"));
+
+  console.log(currentId);
+
+  // let idSelector = document.getElementById("id");
+  let titleSelector = document.getElementById("input-title");
+  let categorySelector = document.getElementById("input-category");
+  let yearSelector = document.getElementById("input-year");
+  let castSelector = document.getElementById("input-cast");
+  let descSelector = document.getElementById("input-desc");
+  let trailerSelector = document.getElementById("input-trailer");
+  let imageSelector = document.getElementById("input-link-img");
+
+  // let idValue = Number(idSelector.value);
+  let titleValue = titleSelector.value;
+  let categoryValue = categorySelector.value;
+  let yearValue = yearSelector.value;
+  let castValue = castSelector.value;
+  let descValue = descSelector.value;
+  let trailerValue = trailerSelector.value;
+  let imageValue = imageSelector.value;
+
+  let newObj = {
+    id: currentId,
+    name: titleValue,
+    category: categoryValue,
+    year: yearValue,
+    actors: castValue,
+    description: descValue,
+    link: trailerValue,
+    img: imageValue,
+  };
+
+  let newA = [];
+
+  if (newDatas === null) {
+    for (let data of datas) {
+      // console.log(data);
+      if (data.id !== currentId) {
+        newA.push(data);
+      } else {
+        newA.push(newObj);
+      }
+    }
+  } else {
+    for (let data of newDatas) {
+      // console.log(data);
+      if (data.id !== currentId) {
+        newA.push(data);
+      } else {
+        newA.push(newObj);
+      }
+    }
+  }
+
+  listMovies(newA);
+  titleSelector.value = "";
+  categorySelector.value = "";
+  yearSelector.value = "";
+  castSelector.value = "";
+  descSelector.value = "";
+  trailerSelector.value = "";
+  imageSelector.value = "";
+}
+
 function createMovie() {
   // let idSelector = document.getElementById("id");
   let titleSelector = document.getElementById("input-title");
@@ -109,7 +201,7 @@ function listMovies(movies) {
       >
         <i class="bx bx-play-circle"></i>Watch Trailer
       </a>
-      <button href="" class="btn-edit">
+      <button onclick="editMovie(${id})" href="" class="btn-edit">
         <i class="bx bx-edit-alt"></i>Edit
       </button>
       <button onclick="deleted(${id})" href="" class="btn-delete">
@@ -128,9 +220,15 @@ function findMovies() {
 
   //coba pake for of
 
-  result = datas.filter((el) =>
-    el.name.toLowerCase().includes(keywordSelector.toLowerCase())
-  );
+  if (newDatas === null) {
+    result = datas.filter((el) =>
+      el.name.toLowerCase().includes(keywordSelector.toLowerCase())
+    );
+  } else {
+    result = newDatas.filter((el) =>
+      el.name.toLowerCase().includes(keywordSelector.toLowerCase())
+    );
+  }
 
   listMovies(result);
 }
