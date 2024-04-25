@@ -23,7 +23,7 @@ function createMovie() {
   let imageValue = imageSelector.value;
 
   let tempObj = {
-    id: datas.length,
+    id: datas[datas.length - 1].id + 1,
     name: titleValue,
     category: categoryValue,
     year: yearValue,
