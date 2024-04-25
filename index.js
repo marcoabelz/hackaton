@@ -1,23 +1,4 @@
-// let data = dummyData;
-
-// let title = document.getElementById("name");
-// let category = document.getElementById("category");
-// let year = document.getElementById("year");
-// let img = document.getElementById("img");
-// let link = document.getElementById("link");
-// let actors = document.getElementById("actors");
-
 let newDatas = null;
-
-// Selector
-// let titleSelector = document.getElementById("title");
-// let categorySelector = document.getElementById("category");
-// let yearSelector = document.getElementById("year");
-// let imgSelector = document.getElementById("img");
-// let linkSelector = document.getElementById("link");
-// let actorsSelector = document.getElementById("actors");
-// let descriptionSelector = document.getElementById("description");
-// let keywordInputSelector = document.getElementById("keyword");
 
 //harus terpanggil 1x ketika web di refresh
 listMovies(datas);
@@ -94,6 +75,7 @@ function findMovies() {
 //Reset
 function reset() {
   listMovies(datas);
+  let keywordInputSelector = document.getElementById("keyword");
   keywordInputSelector.value = "";
 }
 
