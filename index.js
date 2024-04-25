@@ -1,34 +1,81 @@
 // let data = dummyData;
 
-/* Read */
+// let title = document.getElementById("name");
+// let category = document.getElementById("category");
+// let year = document.getElementById("year");
+// let img = document.getElementById("img");
+// let link = document.getElementById("link");
+// let actors = document.getElementById("actors");
+
+let newDatas = null;
+
+// Selector
+let titleSelector = document.getElementById("title");
+let categorySelector = document.getElementById("category");
+let yearSelector = document.getElementById("year");
+let imgSelector = document.getElementById("img");
+let linkSelector = document.getElementById("link");
+let actorsSelector = document.getElementById("actors");
+
+//harus terpanggil 1x ketika web di refresh
+listMovies(datas);
+
+// Read
 function listMovies(movies) {
-  let result = {};
+  let wadah = document.getElementById("wadah");
+  let keyword = document.getElementById("keyword");
+  keyword.innerHTML = "";
 
-  for (let perMovie of movies) {
-    console.log(perMovie);
+  wadah.innerHTML = "";
+
+  for (let perMovies of movies) {
+    let { id, name, category, year, img, link, actors } = perMovies;
+
+    let verString = "";
+    for (let char of actors) {
+      verString += `${char} `;
+    }
+
+    wadah.innerHTML += `<div class="kartu">
+    <p id="title">${name}</p>
+    <p id="category">${category}</p>
+    <p id="year">${year}</p>
+    <img src="${img}" alt="${name}" />
+    <a href="${link}" target="_blank">Youtube ${name}</a>
+    <p id="actors">${verString}</p>
+    <button>Edit</button>
+    <button>Delete</button> 
+
+  </div><br><br>`;
   }
-
-  return result;
 }
-console.log(
-  listMovies([
-    {
-      id: 0,
-      name: "Jenal the movie",
-      category: "Action",
-      year: 2024,
-      img: "https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEtOWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
-      link: "https://www.youtube.com/watch?v=2QKg5SZ_35I",
-      actors: ["Tom Cruise", "Jenal"],
-    },
-    {
-      id: 1,
-      name: "Doraemon",
-      category: "Cartoon",
-      year: 2000,
-      img: "https://i.pinimg.com/736x/74/c1/18/74c118b4cffc66837af9a42e003da097.jpg",
-      link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
-      actors: ["Shizuka", "Nobita"],
-    },
-  ])
-);
+
+// Search
+function findMovies() {
+  let result = [];
+
+  let keywordSelector = document.getElementById("keyword").value;
+
+  //coba pake for of
+
+  result = datas.filter((el) =>
+    el.name.toLowerCase().includes(keywordSelector.toLowerCase())
+  );
+
+  listMovies(result);
+}
+
+//RESET
+function reset() {
+  listMovies(datas);
+}
+
+function deleted(id) {
+  if (newArray === null) {
+    for (let data of datas) {
+    }
+  } else {
+    for (let data of newDatas) {
+    }
+  }
+}

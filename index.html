@@ -4,9 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- <p id="id">ID</p> -->
+
+    <input id="keyword" type="text" />
+    <button onclick="findMovies()">Coba</button>
+    <button onclick="reset()">Reset</button>
+    <div id="wadah">
+      <div class="kartu">
+        <p id="title">NAME</p>
+        <p id="category">CATEGORY</p>
+        <p id="year">YEAR</p>
+        <img id="img" src="" alt="" />
+        <a href="#" id="link" target="_blank">LINK</a>
+        <p id="actors">ACTOR</p>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="index.js"></script>
   </body>

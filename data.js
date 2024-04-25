@@ -1,4 +1,4 @@
-let dummyData = [
+let datas = [
   {
     id: 0,
     name: "Jenal the movie",
@@ -16,5 +16,32 @@ let dummyData = [
     img: "https://i.pinimg.com/736x/74/c1/18/74c118b4cffc66837af9a42e003da097.jpg",
     link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
     actors: ["Shizuka", "Nobita"],
+  },
+  {
+    id: 2,
+    name: "Spongebob",
+    category: "Cartoon",
+    year: 2003,
+    img: "https://i.pinimg.com/736x/74/c1/18/74c118b4cffc66837af9a42e003da097.jpg",
+    link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
+    actors: ["Spongebob", "Patrick", "Squidward"],
+  },
+  {
+    id: 3,
+    name: "Warkop DKI",
+    category: "Comedy",
+    year: 2000,
+    img: "https://i.pinimg.com/736x/74/c1/18/74c118b4cffc66837af9a42e003da097.jpg",
+    link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
+    actors: ["Dono", "Kasino", "Indro"],
+  },
+  {
+    id: 4,
+    name: "Fast n Furious 2",
+    category: "Action",
+    year: 2007,
+    img: "https://i.pinimg.com/736x/74/c1/18/74c118b4cffc66837af9a42e003da097.jpg",
+    link: "https://www.youtube.com/watch?v=bNd5xfqVw1M",
+    actors: ["Paul Walker", "Vin Diesel"],
   },
 ];
