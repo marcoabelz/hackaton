@@ -271,7 +271,7 @@ function deleted(id) {
 }
 
 
-// Change Menu to Add Movie
+// Change to Add Movie
 function hideDashboard() {
   document.getElementById("add-movie-page").style.display = "block";
   document.getElementById("main-container").style.display = "none";
@@ -281,12 +281,13 @@ function hideDashboard() {
   document.getElementById("update-data").style.display = "none";
 }
 
-// Change Menu to Dashboard
+// Change to Dashboard
 function hideAddMovie() {
   document.getElementById("main-container").style.display = "block";
   document.getElementById("add-movie-page").style.display = "none";
 }
 
+// Change to Update Movie
 function showUpdate() {
   document.getElementById("add-movie-page").style.display = "block";
   document.getElementById("main-container").style.display = "none";
@@ -294,8 +295,6 @@ function showUpdate() {
   document.getElementById("title-header").innerHTML = "Update Movie";
   document.getElementById("update-data").style.display = "block";
   document.getElementById("create-data").style.display = "none";
-
-  let a = document.getElementById("update-data");
 }
 
 
