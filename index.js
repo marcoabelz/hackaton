@@ -3,6 +3,55 @@ let newDatas = null;
 //harus terpanggil 1x ketika web di refresh
 listMovies(datas);
 
+function createMovie() {
+  let idSelector = document.getElementById("id");
+  let titleSelector = document.getElementById("input-title");
+  let categorySelector = document.getElementById("input-category");
+  let yearSelector = document.getElementById("input-year");
+  let castSelector = document.getElementById("input-cast");
+  let descSelector = document.getElementById("input-desc");
+  let trailerSelector = document.getElementById("input-trailer");
+  let imageSelector = document.getElementById("input-link-img");
+
+  let idValue = Number(idSelector.value);
+  let titleValue = titleSelector.value;
+  let categoryValue = categorySelector.value;
+  let yearValue = yearSelector.value;
+  let castValue = castSelector.value;
+  let descValue = descSelector.value;
+  let trailerValue = trailerSelector.value;
+  let imageValue = imageSelector.value;
+
+  let tempObj = {
+    id: idValue,
+    name: titleValue,
+    category: categoryValue,
+    year: yearValue,
+    actors: castValue,
+    description: descValue,
+    link: trailerValue,
+    img: imageValue,
+  };
+  if (newDatas === null) {
+    datas.push(tempObj);
+    listMovies(datas);
+  } else {
+    newDatas.push(tempObj);
+    listMovies(newDatas);
+  }
+
+  console.log(
+    titleValue,
+    categoryValue,
+    yearValue,
+    castValue,
+    descValue,
+    trailerValue,
+    imageValue
+  );
+  console.log(datas);
+}
+
 // Read
 function listMovies(movies) {
   // let container = document.getElementsByClassName("container")[0];
@@ -15,10 +64,10 @@ function listMovies(movies) {
     let { id, name, category, year, img, link, actors, description } =
       perMovies;
 
-    let verString = "";
-    for (let char of actors) {
-      verString += `${char} `;
-    }
+    // let verString = "";
+    // for (let char of actors) {
+    //   verString += `${char} `;
+    // }
 
     container.innerHTML += `<div class="container-card">
     <div class="card">
@@ -34,7 +83,7 @@ function listMovies(movies) {
         <p id="description" class="card-body-desc">
           ${description}
         </p>
-        <p id="actors" class="card-body-actor">${verString}</p>
+        <p id="actors" class="card-body-actor">${actors}</p>
       </div>
     </div>
     <div class="buttons">
@@ -108,4 +157,3 @@ function deleted(id) {
     listMovies(temp);
   }
 }
-

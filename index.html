@@ -57,23 +57,37 @@
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div class="form-area">
-            <form action="" class="am-form">
+            <form class="am-form">
+              <input id="id" type="number" />
               <label for="input-title">Movie Title</label>
-              <input id="input-title" type="text">
+              <input id="input-title" type="text" />
+
               <label for="input-category">Category</label>
-              <input id="input-category" type="text">
+              <input id="input-category" type="text" />
+
               <label for="input-year">Released Year</label>
-              <input id="input-year" type="number">
+              <input id="input-year" type="number" />
+
               <label for="input-cast">Cast</label>
-              <input id="input-cast" type="text">
+              <input id="input-cast" type="text" />
+
               <label for="input-desc">Synopsis</label>
-              <textarea name="input-desc" id="input-desc" rows="5"></textarea>
+              <textarea
+                name="input-desc"
+                id="input-desc"
+                rows="5"
+                maxlength="80"
+              ></textarea>
+
               <label for="input-trailer">Trailer (Youtube Link)</label>
-              <input id="input-trailer" type="text">
+              <input id="input-trailer" type="text" />
+
               <label for="input-link-img">Movie Poster (Image Link)</label>
-              <input id="input-link-img" type="text" accept="image">
-              <button type="submit" id="submit-img">Submit</button>
+              <input id="input-link-img" type="text" accept="image" />
             </form>
+            <button onclick="createMovie()" type="submit" id="submit-img">
+              Submit
+            </button>
           </div>
         </div>
       </div>
