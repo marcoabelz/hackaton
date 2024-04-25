@@ -258,3 +258,93 @@ main {
 .btn-delete .bx {
     margin-right: 6px;
 }
+
+/* --- Add Movie --- */
+.am-container-1 {
+    padding: 24px 32px;
+    background-color: #272727;
+    border-radius: 16px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.189);
+}
+
+.am-title-header {
+    color: #f1f1f1;
+}
+
+.am-title-header h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.am-title-header p {
+    font-weight: 500;
+}
+
+.form-area {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.am-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.am-form label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #f1f1f1;
+}
+
+textarea,
+.am-form input {
+    margin-bottom: 24px;
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f1f1f1;
+    background-color: #363636;
+    border-radius: 4px;
+}
+
+#input-desc {
+    resize: vertical;
+    min-height: 100px;
+}
+.container-upload-img button {
+    margin: 0 8px 0 0;
+    margin-right: auto;
+    width: fit-content;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #3CBBF2;
+    cursor: pointer;
+    color: #3CBBF2;
+    background-color: #3cbbf21e;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#btn-upload:hover {
+    background-color: #3dbff75b;
+    color: #f1f1f1;
+}
+
+#submit-img {
+    margin: 16px 0;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #f1f1f1;
+    background-color: #0275d8;
+    border-radius: 8px;   
+}
