@@ -49,7 +49,7 @@ function listMovies(movies) {
       <button href="" class="btn-edit">
         <i class="bx bx-edit-alt"></i>Edit
       </button>
-      <button href="" class="btn-delete">
+      <button onclick="deleted(${id})" href="" class="btn-delete">
         <i class="bx bx-trash"></i>Delete
       </button>
     </div>
@@ -74,20 +74,37 @@ function findMovies() {
 
 //Reset
 function reset() {
-  listMovies(datas);
-  let keywordInputSelector = document.getElementById("keyword");
-  keywordInputSelector.value = "";
+  if (newDatas === null) {
+    listMovies(datas);
+    let keywordInputSelector = document.getElementById("keyword");
+    keywordInputSelector.value = "";
+  } else {
+    listMovies(newDatas);
+    let keywordInputSelector = document.getElementById("keyword");
+    keywordInputSelector.value = "";
+  }
 }
 
 //Delete
 function deleted(id) {
   console.log(id);
   if (newDatas === null) {
-    for (let data of datas) {
-      console.log(data);
+    newDatas = [];
+    for (let perData of datas) {
+      if (id !== perData.id) {
+        newDatas.push(perData);
+      }
     }
+    listMovies(newDatas);
   } else {
+    let temp = [];
     for (let data of newDatas) {
+      if (id !== data.id) {
+        temp.push(data);
+      }
     }
+
+    newDatas = [...temp];
+    listMovies(temp);
   }
 }
