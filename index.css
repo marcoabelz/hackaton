@@ -1,0 +1,260 @@
+/* --- Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+}
+
+html, 
+body {
+    min-height: 100% !important;
+    height: 100%;
+    background-color: #151515;
+}
+
+
+/* --- Sidebar --- */
+
+aside {
+    padding: 24px 0;
+    width: 20%;
+    height: 100%;
+    background-color: #1B1B1B;
+    position: fixed;
+}
+
+.sidebar-head {
+    display: flex;
+    margin: 0 0 0 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-head a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3CBBF2;
+    text-decoration: none;
+}
+
+.sidebar-head .bx {
+    font-size: 24px;
+}
+
+.sidebar-body {
+    margin: 24px 0 0;
+}
+
+#sidebar-ul {
+    margin: 16px 0;
+    display: inline;
+    width: 100%;
+    list-style-type: none;
+    gap: 8px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    transition: 0.4s;
+}
+
+li:hover {
+    background-color: #2b2b2b;
+    padding-left: 30px;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+
+/* --- Search bar --- */
+.container-1 {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.container-search {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-search input {
+    padding: 10px 16px;
+    width: 240px;
+    font-size: 16px;
+    color: #f1f1f1;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #3CBBF2;
+    background-color: #151515;
+}
+
+#btn-search {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #3CBBF2;
+    cursor: pointer;
+}
+
+.bx-search {
+    font-size: 18px;
+}
+
+#btn-reset {
+    padding: 8px 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #adadad;
+    background-color: #2b2b2b;
+    cursor: pointer;
+}
+
+/* --- Main --- */
+main {
+    max-width: 80%;
+    /* height: 100%; */
+    padding: 24px 40px;
+    margin: 0 0 0 20%;
+    background-color: #151515;
+}
+
+
+/* --- Card --- */
+.container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.189);
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    color: #f1f1f1;
+    background-color: #1B1B1B;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-img img {
+    width: 150px;
+    display: flex;
+    border-radius: 8px 0 0 0;
+}
+
+.card-body {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #adadad;
+}
+
+.card-body-title {
+    color: #f1f1f1;
+}
+
+.card-body-desc {
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    background-color: #2b2b2b;
+    border-radius: 0 0 8px 8px;
+    gap: 4px;
+}
+
+#btn-watch-trailer {
+    margin: 0 8px 0 0;
+    margin-right: auto;
+    width: fit-content;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #3CBBF2;
+    cursor: pointer;
+    color: #3CBBF2;
+    background-color: #3cbbf21e;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#btn-watch-trailer:hover {
+    background-color: #3dbff75b;
+    color: #f1f1f1;
+}
+
+#btn-watch-trailer .bx {
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+.btn-edit {
+    margin: 0 8px 0 0;
+    margin-right: 12px;
+    width: fit-content;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #f1f1f1;
+    background-color: rgb(230, 150, 0);
+    border-radius: 8px;
+}
+
+.btn-edit .bx {
+    margin-right: 6px;
+}
+
+.btn-delete {
+    right: 0;
+    width: fit-content;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #f1f1f1;
+    background-color: rgb(181, 24, 0);
+    border-radius: 8px;
+}
+
+.btn-delete .bx {
+    margin-right: 6px;
+}

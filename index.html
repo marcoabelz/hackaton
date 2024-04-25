@@ -3,28 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Lorem | Dashboard Admin</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <!-- <p id="id">ID</p> -->
-
-    <input id="keyword" type="text" />
-    <button onclick="findMovies()">Coba</button>
-    <button onclick="reset()">Reset</button>
-    <div id="wadah">
-      <div class="kartu">
-        <p id="title">NAME</p>
-        <p id="category">CATEGORY</p>
-        <p id="year">YEAR</p>
-        <img id="img" src="" alt="" />
-        <a href="#" id="link" target="_blank">LINK</a>
-        <p id="actors">ACTOR</p>
-        <button>Edit</button>
-        <button>Delete</button>
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <i class='bx bxs-camera-movie' style='color:#3CBBF2'></i>
+        <a href="">Lorem</a>
       </div>
-    </div>
-
+      <div class="sidebar-body">
+        <ul id="sidebar-ul">
+          <li>
+            <i class='bx bxs-dashboard' style="color: #f1f1f1;"></i>
+            <a href="#">Dashboard</a>
+          </li>
+          <li>
+            <i class='bx bxs-plus-circle' style='color:#f1f1f1'></i>
+            <a href="#">Add Movie</a>
+          </li>
+          <li>
+            <i class='bx bxs-group' style='color:#f1f1f1'></i>            
+            <a href="#">About Us</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <div class="container-1">
+        <div class="container-search">
+          <input type="text" placeholder="Search here...">
+          <button class="btn-search-bar" id="btn-search"><i class='bx bx-search' style='color:#f1f1f1'></i></button>
+        </div>
+        <button class="btn-search-bar" id="btn-reset">Reset</button>
+      </div>
+      <div class="container-2">
+        <div class="container-card">
+          <div class="card">
+            <div class="card-img">
+              <img src="./assets/movie-poster-1.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-body-title">Card Title</h3>
+              <div class="card-group">
+                <span class="card-body-year">2021</span><span> | </span><span class="card-body-category">Science Fiction</span>
+              </div>
+              <p class="card-body-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos?</p>
+              <p class="card-body-actor">Pemeran: Lorem, ipsum, dolor.</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn-watch" id="btn-watch-trailer" onclick="location.href='https://www.youtube.com/watch?v=8g18jFHCLXk'"><i class='bx bx-play-circle'></i>Watch Trailer</button>
+            <button href="" class="btn-edit"><i class='bx bx-edit-alt'></i>Edit</button>
+            <button href="" class="btn-delete"><i class='bx bx-trash' ></i>Delete</button>
+          </div>
+        </div>
+        <div class="container-card">
+          <div class="card">
+            <div class="card-img">
+              <img src="./assets/movie-poster-1.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-body-title">Card Title</h3>
+              <div class="card-group">
+                <span class="card-body-year">2021</span><span> | </span><span class="card-body-category">Science Fiction</span>
+              </div>
+              <p class="card-body-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos?</p>
+              <p class="card-body-actor">Pemeran: Lorem, ipsum, dolor.</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn-watch" id="btn-watch-trailer" onclick="location.href='https://www.youtube.com/watch?v=8g18jFHCLXk'"><i class='bx bx-play-circle'></i>Watch Trailer</button>
+            <button href="" class="btn-edit"><i class='bx bx-edit-alt'></i>Edit</button>
+            <button href="" class="btn-delete"><i class='bx bx-trash' ></i>Delete</button>
+          </div>
+        </div>
+        <div class="container-card">
+          <div class="card">
+            <div class="card-img">
+              <img src="./assets/movie-poster-1.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-body-title">Card Title</h3>
+              <div class="card-group">
+                <span class="card-body-year">2021</span><span> | </span><span class="card-body-category">Science Fiction</span>
+              </div>
+              <p class="card-body-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos?</p>
+              <p class="card-body-actor">Pemeran: Lorem, ipsum, dolor.</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn-watch" id="btn-watch-trailer" onclick="location.href='https://www.youtube.com/watch?v=8g18jFHCLXk'"><i class='bx bx-play-circle'></i>Watch Trailer</button>
+            <button href="" class="btn-edit"><i class='bx bx-edit-alt'></i>Edit</button>
+            <button href="" class="btn-delete"><i class='bx bx-trash' ></i>Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="data.js"></script>
     <script src="index.js"></script>
   </body>
