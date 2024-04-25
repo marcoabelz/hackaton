@@ -13,7 +13,7 @@ function createMovie() {
   let trailerSelector = document.getElementById("input-trailer");
   let imageSelector = document.getElementById("input-link-img");
 
-  let idValue = Number(idSelector.value);
+  // let idValue = Number(idSelector.value);
   let titleValue = titleSelector.value;
   let categoryValue = categorySelector.value;
   let yearValue = yearSelector.value;
@@ -23,7 +23,7 @@ function createMovie() {
   let imageValue = imageSelector.value;
 
   let tempObj = {
-    id: idValue,
+    id: datas.length,
     name: titleValue,
     category: categoryValue,
     year: yearValue,
@@ -41,6 +41,7 @@ function createMovie() {
   }
 
   console.log(
+    // id,
     titleValue,
     categoryValue,
     yearValue,
@@ -136,7 +137,7 @@ function reset() {
 
 //Delete
 function deleted(id) {
-  console.log(id);
+  // console.log(id);
   if (newDatas === null) {
     newDatas = [];
     for (let perData of datas) {
