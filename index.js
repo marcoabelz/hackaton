@@ -4,7 +4,7 @@ let newDatas = null;
 listMovies(datas);
 
 function createMovie() {
-  let idSelector = document.getElementById("id");
+  // let idSelector = document.getElementById("id");
   let titleSelector = document.getElementById("input-title");
   let categorySelector = document.getElementById("input-category");
   let yearSelector = document.getElementById("input-year");
@@ -22,35 +22,48 @@ function createMovie() {
   let trailerValue = trailerSelector.value;
   let imageValue = imageSelector.value;
 
-  let tempObj = {
-    id: datas[datas.length - 1].id + 1,
-    name: titleValue,
-    category: categoryValue,
-    year: yearValue,
-    actors: castValue,
-    description: descValue,
-    link: trailerValue,
-    img: imageValue,
-  };
-  if (newDatas === null) {
-    datas.push(tempObj);
-    listMovies(datas);
+  if (
+    !titleValue ||
+    !categoryValue ||
+    !yearValue ||
+    !castValue ||
+    !descValue ||
+    !trailerValue ||
+    !imageValue
+  ) {
+    alert("Kosong");
   } else {
-    newDatas.push(tempObj);
-    listMovies(newDatas);
+    let tempObj = {
+      id: datas[datas.length - 1].id + 1,
+      name: titleValue,
+      category: categoryValue,
+      year: yearValue,
+      actors: castValue,
+      description: descValue,
+      link: trailerValue,
+      img: imageValue,
+    };
+
+    if (newDatas === null) {
+      datas.push(tempObj);
+      listMovies(datas);
+    } else {
+      newDatas.push(tempObj);
+      listMovies(newDatas);
+    }
   }
 
-  console.log(
-    // id,
-    titleValue,
-    categoryValue,
-    yearValue,
-    castValue,
-    descValue,
-    trailerValue,
-    imageValue
-  );
-  console.log(datas);
+  // console.log(
+  //   // id,
+  //   titleValue,
+  //   categoryValue,
+  //   yearValue,
+  //   castValue,
+  //   descValue,
+  //   trailerValue,
+  //   imageValue
+  // );
+  // console.log(datas);
 }
 
 // Read
@@ -137,7 +150,7 @@ function reset() {
 
 //Delete
 function deleted(id) {
-  // console.log(id);
+  console.log(id);
   if (newDatas === null) {
     newDatas = [];
     for (let perData of datas) {
