@@ -48,41 +48,7 @@
         </button>
       </div>
       <div id="container" class="container-2">
-        <a href="" ></a>
-        <!-- <div class="container-card">
-          <div class="card">
-            <div class="card-img">
-              <img src="${img}" alt="${name}" />
-            </div>
-            <div class="card-body">
-              <h3 id="title" class="card-body-title">${name}</h3>
-              <div class="card-group">
-                <span id="year" class="card-body-year">${year}</span
-                ><span> | </span
-                ><span id="category" class="card-body-category"
-                  >${category}</span
-                >
-              </div>
-              <p id="description" class="card-body-desc">${description}</p>
-              <p id="actors" class="card-body-actor">${verString}</p>
-            </div>
-          </div>
-          <div class="buttons">
-            <button
-              class="btn-watch"
-              id="btn-watch-trailer"
-              onclick="location.href='${link}'"
-            >
-              <i class="bx bx-play-circle"></i>Watch Trailer
-            </button>
-            <button href="" class="btn-edit">
-              <i class="bx bx-edit-alt"></i>Edit
-            </button>
-            <button href="" class="btn-delete">
-              <i class="bx bx-trash"></i>Delete
-            </button>
-          </div>
-        </div> -->
+        <a href=""></a>
       </div>
       <div class="add-movie-page">
         <div class="am-container-1">
@@ -91,23 +57,35 @@
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div class="form-area">
-            <form action="" class="am-form">
+            <form class="am-form">
+              <!-- <input id="id" type="number" /> -->
               <label for="input-title">Movie Title</label>
-              <input id="input-title" type="text">
+              <input id="input-title" type="text" />
+
               <label for="input-category">Category</label>
-              <input id="input-category" type="text">
+              <input id="input-category" type="text" />
+
               <label for="input-year">Released Year</label>
-              <input id="input-year" type="number">
+              <input id="input-year" type="number" />
+
               <label for="input-cast">Cast</label>
-              <input id="input-cast" type="text">
+              <input id="input-cast" type="text" />
+
               <label for="input-desc">Synopsis</label>
+
               <textarea name="input-desc" id="input-desc" rows="5" maxlength="290"></textarea>
               <label for="input-trailer">Trailer (Youtube Link)</label>
-              <input id="input-trailer" type="text">
+              <input id="input-trailer" type="text" />
+
               <label for="input-link-img">Movie Poster (Image Link)</label>
+
               <input id="input-link-img" type="text">
               <button type="submit" id="submit-img">Submit</button>
+
             </form>
+            <button onclick="createMovie()" type="submit" id="submit-img">
+              Submit
+            </button>
           </div>
         </div>
       </div>
