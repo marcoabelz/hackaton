@@ -201,7 +201,7 @@ function listMovies(movies) {
       >
         <i class="bx bx-play-circle"></i>Watch Trailer
       </a>
-      <button onclick="editMovie(${id})" href="" class="btn-edit">
+      <button onclick="editMovie(${id}), showUpdate()" href="" class="btn-edit">
         <i class="bx bx-edit-alt"></i>Edit
       </button>
       <button onclick="deleted(${id})" href="" class="btn-delete">
@@ -276,6 +276,8 @@ function hideDashboard() {
   document.getElementById("add-movie-page").style.display = "block";
   document.getElementById("main-container").style.display = "none";
 
+  document.getElementById("title-header").innerHTML = "Add Movie";
+  document.getElementById("create-data").style.display = "block";
   document.getElementById("update-data").style.display = "none";
 }
 
@@ -286,7 +288,14 @@ function hideAddMovie() {
 }
 
 function showUpdate() {
+  document.getElementById("add-movie-page").style.display = "block";
+  document.getElementById("main-container").style.display = "none";
 
+  document.getElementById("title-header").innerHTML = "Update Movie";
+  document.getElementById("update-data").style.display = "block";
+  document.getElementById("create-data").style.display = "none";
+
+  let a = document.getElementById("update-data");
 }
 
 
