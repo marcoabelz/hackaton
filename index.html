@@ -84,31 +84,29 @@
           </div>
         </div> -->
       </div>
-      <div class="add-movie-page" style="display: none;">
+      <div class="add-movie-page">
         <div class="am-container-1">
           <div class="am-title-header">
             <h2>Add Movie</h2>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div class="form-area">
-            <div class="container-upload-img">
-              <div class="box-upload">
-                <i class='bx bx-cloud-upload' style='color:#f1f1f1'></i>
-                <p>Upload image</p>
-              </div>
-              <button class="btn-upload">Select image</button>
-            </div>
             <form action="" class="am-form">
-              <label for="movie-title">Movie Title</label>
+              <label for="input-title">Movie Title</label>
               <input id="input-title" type="text">
-              <label for="">Category</label>
+              <label for="input-category">Category</label>
               <input id="input-category" type="text">
-              <label for="">Released Year</label>
-              <input type="number">
-              <label for="">Trailer (Youtube Link)</label>
-              <input type="text">
-              <label for="">Actors/Actress</label>
-              <input type="text">
+              <label for="input-year">Released Year</label>
+              <input id="input-year" type="number">
+              <label for="input-cast">Cast</label>
+              <input id="input-cast" type="text">
+              <label for="input-desc">Synopsis</label>
+              <textarea name="input-desc" id="input-desc" rows="5"></textarea>
+              <label for="input-trailer">Trailer (Youtube Link)</label>
+              <input id="input-trailer" type="text">
+              <label for="input-link-img">Movie Poster (Image Link)</label>
+              <input id="input-link-img" type="text" accept="image">
+              <button type="submit" id="submit-img">Submit</button>
             </form>
           </div>
         </div>
