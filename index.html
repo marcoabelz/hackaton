@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lorem | Dashboard Admin</title>
+    <title>MovieManager | Dashboard Admin</title>
     <link rel="icon" href="./assets/logo.png" />
     <link rel="stylesheet" href="index.css" />
     <link
@@ -14,47 +14,61 @@
   <body>
     <aside class="sidebar">
       <div class="sidebar-head">
-        <i class="bx bxs-camera-movie" style="color: #3cbbf2"></i>
-        <a href="">Lorem</a>
+        <i class="bx bxs-camera-movie" style="color: #ED9455"></i>
+        <a href="">MovieManager</a>
       </div>
       <div class="sidebar-body">
         <ul id="sidebar-ul">
           <li>
             <i class="bx bxs-dashboard" style="color: #f1f1f1"></i>
-            <a href="#">Dashboard</a>
+            <a href="#" id="dashboard" onclick="hideAddMovie()">Dashboard</a>
           </li>
           <li>
             <i class="bx bxs-plus-circle" style="color: #f1f1f1"></i>
-            <a href="#">Add Movie</a>
+            <a href="#" id="add-movie-menu" onclick="hideDashboard()">Add Movie</a>
           </li>
           <li>
             <i class="bx bxs-group" style="color: #f1f1f1"></i>
-            <a href="#">About Us</a>
+            <a href="#" id="about-us-menu" onclick="showAboutUs()">About Us</a>
           </li>
         </ul>
       </div>
     </aside>
     <main>
       <a href="" target="_blank"></a>
-      <div class="container-1">
-        <div class="container-search">
-          <input id="keyword" type="text" placeholder="Search here..." />
-          <button onclick="findMovies()" class="btn-search-bar" id="btn-search">
-            <i class="bx bx-search" style="color: #f1f1f1"></i>
+      <div class="main-container" id="main-container">
+        <div class="container-1">
+          <div class="welcome-text">
+            <img id="hand-emoji" src="./assets/waving-hand-facebook.png" alt="">
+            <h2>Welcome, <span id="name">...</span>!</h2>
+          </div>
+          <div class="container-search">
+            <input id="keyword" type="text" placeholder="Search here..." />
+            <button onclick="findMovies()" class="btn-search-bar" id="btn-search">
+              <i class="bx bx-search" style="color: #f1f1f1"></i>
+            </button>
+          </div>
+          <button onclick="reset()" class="btn-search-bar" id="btn-reset">
+            Reset
           </button>
         </div>
-        <button onclick="reset()" class="btn-search-bar" id="btn-reset">
-          Reset
-        </button>
+        <div id="container" class="container-2">
+          <a href=""></a>
+        </div>
       </div>
-      <div id="container" class="container-2">
-        <a href=""></a>
-      </div>
-      <div class="add-movie-page">
+      <div class="add-movie-page" id="add-movie-page" style="display: none;">
+        <div class="alert" id="alert" style="display: none;">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+          Mohon mengisi data yang kosong
+        </div>
+        <div class="success" id="success" style="display: none;">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+          Data berhasil di-update! <span><button onclick="hideAddMovie()">Click here</button></span>
+        </div>
         <div class="am-container-1">
           <div class="am-title-header">
-            <h2>Add Movie</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h2 id="title-header">Add Movie</h2>
+            <p id="sub-title-header">Please fill in the form</p>
           </div>
           <a href="#formEdit"></a>
           <div class="form-area">
@@ -66,7 +80,7 @@
               <label for="input-category">Category</label>
               <input id="input-category" type="text" />
 
-              <label for="input-year">Released Year</label>
+              <label for="input-year">Release Year</label>
               <input id="input-year" type="number" />
 
               <label for="input-cast">Cast</label>
@@ -78,7 +92,7 @@
                 name="input-desc"
                 id="input-desc"
                 rows="5"
-                maxlength="290"
+                maxlength="265"
               ></textarea>
               <label for="input-trailer">Trailer (Youtube Link)</label>
               <input id="input-trailer" type="text" />
@@ -87,16 +101,56 @@
 
               <input id="input-link-img" type="text" />
             </form>
-            <button onclick="updateData()" type="submit" id="submit-img">
+            <button onclick="updateData()" href="#main-container" type="submit" id="update-data">
               Update
             </button>
-            <button onclick="createMovie()" type="submit" id="submit-img">
+            <button onclick="createMovie()" href="#main-container" type="submit" id="create-data">
               Submit
             </button>
           </div>
         </div>
       </div>
-      <div class="delete-movie"></div>
+      
+      <div id="section-about-us" style="display: none;">
+        <header>
+          <div class="container">
+              <h1>About Us</h1>
+          </div>
+        </header>
+        <div class="container">
+          <section id="section-1">
+            <h2></h2>
+            <div class="team-members">
+              <div class="team-member">
+                <img src="https://media.istockphoto.com/id/1200501984/photo/a-beautiful-tiger.jpg?s=612x612&w=0&k=20&c=GvMew_QgtKFV0669FRxtbIvnqySeNhTMwtm1_LfrUPI=" alt="Team Member 1">
+                <h3>Marco Abel Zefanya</h3>
+                <p>Besto Backendo In the Worldo</p>
+              </div>
+              <div class="team-member">
+                <img src="https://img.okezone.com/content/2023/04/14/406/2798689/kenapa-capybara-sangat-santai-yuk-kenalan-dengan-hewan-lucu-ini-qBZHWZqV7w.JPG" alt="Team Member 2">
+                <h3>Bernadeta Regina P</h3>
+                <p>Did 99% of the Front-End</p>
+              </div>
+              <!-- Add more team members here -->
+              <div class="team-member">
+                <img src="https://images.squarespace-cdn.com/content/v1/55b786cce4b0abd99ecbcb5a/1619116530828-5JITT6JSUFY7TFOOZF38/9915871594_3d5f2f3240_k.jpg" alt="Team Member 2">
+                <h3>Adytia Isanda Putra</h3>
+                <p>That "I got an idea.." dude</p>
+              </div>
+            </div>
+          </section>
+          <section id="section-2">
+            <h2>Kelompok 1</h2>
+            <p>Welcome to our website!</p>
+            <p>Founded in 2024, we swiftly rallied together, fueled by our passion for innovation and driven by the challenge of Hackathon8</p>
+          </section>
+        </div>
+        <footer>
+          <div class="container">
+              <p>&copy; 2024 Hackaton8 Kelompok 1 HCK-071. All rights reserved.</p>
+          </div>
+        </footer>  
+      </div>
     </main>
     <script src="data.js"></script>
     <script src="index.js"></script>

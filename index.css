@@ -1,6 +1,19 @@
 /* --- Import Google Font --- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+/* --- Color Theme --- */
+:root {
+    --primary-color: #FFFBDA;
+    --secondary-color: #FFEC9E;
+    --triary-color: #FFBB70;
+    --background-color: #ED9455;
+    --sidebar-color: #263544; 
+    --main-background-color: #f3f7fc;
+    --white-color: #ffffff;
+    --text-color: #28343C;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +31,7 @@ html,
 body {
     min-height: 100% !important;
     height: 100%;
-    background-color: #151515;
+    background-color: #e3ebf4;
 }
 
 
@@ -28,7 +41,7 @@ aside {
     padding: 24px 0;
     width: 20%;
     height: 100%;
-    background-color: #272727;
+    background-color: var(--sidebar-color);
     position: fixed;
 }
 
@@ -43,7 +56,7 @@ aside {
 .sidebar-head a {
     font-size: 18px;
     font-weight: 600;
-    color: #3CBBF2;
+    color: var(--background-color);
     text-decoration: none;
 }
 
@@ -72,22 +85,45 @@ li {
 }
 
 li:hover {
-    background-color: #2b2b2b;
+    background-color: #1d2532;
     padding-left: 30px;
 }
 
 li a {
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    color: #f1f1f1;
+    color: var(--white-color);
 }
 
+/* --- Welcome Message --- */
+.welcome-text {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-right: auto;
+}
+
+#hand-emoji {
+    align-items: center;
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border-radius: 50px;
+}
+.container-1 h2,
+#name {
+    margin-right: auto;
+    font-size: 20px;
+    color: var(--text-color);
+}
 
 /* --- Search bar --- */
 .container-1 {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    /* justify-content: end; */
     flex-direction: row;
     gap: 16px;
     margin-bottom: 32px;
@@ -96,6 +132,8 @@ li a {
 .container-search {
     display: flex;
     flex-direction: row;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(58, 58, 58, 0.075);
 }
 
 .container-search input {
@@ -103,18 +141,18 @@ li a {
     width: 240px;
     font-size: 16px;
     font-weight: 500;
-    color: #f1f1f1;
+    color: var(--text-color);
     outline: none;
     border-radius: 8px 0 0 8px;
-    border: 1px solid #3CBBF2;
-    background-color: #1a1a1a;
+    border: 1px solid transparent;
+    background-color: var(--white-color);
 }
 
 #btn-search {
     padding: 8px 10px;
     border: none;
     border-radius: 0 8px 8px 0;
-    background-color: #3CBBF2;
+    background-color: #35acdf;
     cursor: pointer;
 }
 
@@ -123,13 +161,14 @@ li a {
 }
 
 #btn-reset {
-    padding: 8px 10px;
+    padding: 11px 10px;
     border: none;
     font-size: 16px;
     font-weight: 600;
     border-radius: 8px;
-    color: #adadad;
-    background-color: #2f2f2f;
+    color: var(--white-color);
+    background-color: var(--sidebar-color);
+    box-shadow: 0 8px 8px rgba(58, 58, 58, 0.075);
     cursor: pointer;
 }
 
@@ -139,7 +178,7 @@ main {
     /* height: 100%; */
     padding: 24px 40px;
     margin: 0 0 0 20%;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
 }
 
 
@@ -155,7 +194,8 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.189);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;    
+    border-radius: 16px;
 }
 
 .card {
@@ -163,44 +203,71 @@ main {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    color: #f1f1f1;
-    background-color: #1B1B1B;
-    border-radius: 8px 8px 0 0;
+    color: #f1f1f1de;
+    background-color: var(--white-color);
+    border-radius: 16px 16px 0 0;
 }
 
 .card-img img {
-    width: 150px;
-    height: 200px;
+    width: 190px;
+    height: 240px;
     display: flex;
     object-fit: cover;
-    border-radius: 8px 0 0 0;
+    border-radius: 16px 0 0 0;
 }
 
 .card-body {
     margin: 16px 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     font-weight: 500;
     color: #adadad;
 }
 
 .card-body-title {
-    color: #f1f1f1;
+    color: var(--text-color);
 }
 
 .card-body-desc {
-    margin-right: 8px;
+    margin-right: 24px;
     font-size: 16px;
+    color: var(--text-color);
     line-height: 24px;
 }
 
+#year {
+    margin-right: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: 4px 10px;
+    background-color: #0275d8;
+    border-radius: 25px;
+}
+
+#category {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: 4px 10px;
+    background-color: #00a149;
+    border-radius: 25px;
+}
+
+#description {
+    margin-top: 4px;
+}
+#actors {
+    color: #828282;
+}
 .buttons {
     display: flex;
     justify-content: flex-end;
     padding: 16px;
-    background-color: #2f2f2f;
-    border-radius: 0 0 8px 8px;
+    /* background-color: #ededed; */
+    background-color: var(--secondary-color);
+    border-radius: 0 0 16px 16px;
     gap: 4px;
 }
 
@@ -211,16 +278,16 @@ main {
     padding: 8px 10px;
     font-size: 16px;
     font-weight: 600;
-    border: 2px solid #3CBBF2;
     cursor: pointer;
-    color: #3CBBF2;
-    background-color: #3cbbf21e;
+    color: var(--white-color);
+    background-color: #35acdf;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 8px;
     transition: 0.3s;
 }
 
 #btn-watch-trailer:hover {
-    background-color: #3dbff75b;
+    background-color: #2e94c0;
     color: #f1f1f1;
 }
 
@@ -240,7 +307,13 @@ main {
     font-weight: 600;
     color: #f1f1f1;
     background-color: rgb(230, 150, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: rgb(197, 128, 0);
 }
 
 .btn-edit .bx {
@@ -257,7 +330,13 @@ main {
     font-weight: 600;
     color: #f1f1f1;
     background-color: rgb(181, 24, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: rgb(134, 18, 0);
 }
 
 .btn-delete .bx {
@@ -267,13 +346,13 @@ main {
 /* --- Add Movie --- */
 .am-container-1 {
     padding: 24px 32px;
-    background-color: #272727;
+    background-color: var(--white-color);
     border-radius: 16px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.189);
+    box-shadow: 0 8px 8px rgba(58, 58, 58, 0.075);
 }
 
 .am-title-header {
-    color: #f1f1f1;
+    color: var(--text-color);
 }
 
 .am-title-header h2 {
@@ -289,7 +368,7 @@ main {
     width: 100%;
     margin-top: 24px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .am-form {
@@ -302,7 +381,7 @@ main {
 .am-form label {
     font-weight: 500;
     margin-bottom: 8px;
-    color: #f1f1f1;
+    color: var(--text-color);
 }
 
 textarea,
@@ -313,8 +392,9 @@ textarea,
     border: none;
     font-size: 16px;
     font-weight: 600;
-    color: #f1f1f1;
-    background-color: #363636;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    border: 1px solid #c4c4c4;
     border-radius: 4px;
 }
 
@@ -322,27 +402,14 @@ textarea,
     resize: vertical;
     min-height: 100px;
 }
-.container-upload-img button {
-    margin: 0 8px 0 0;
-    margin-right: auto;
-    width: fit-content;
-    padding: 8px 10px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid #3CBBF2;
-    cursor: pointer;
-    color: #3CBBF2;
-    background-color: #3cbbf21e;
-    border-radius: 8px;
-    transition: 0.3s;
-}
 
 #btn-upload:hover {
     background-color: #3dbff75b;
     color: #f1f1f1;
 }
 
-#submit-img {
+#update-data,
+#create-data {
     margin: 16px 0 8px;
     padding: 8px 10px;
     font-size: 16px;
@@ -351,5 +418,153 @@ textarea,
     font-weight: 600;
     color: #f1f1f1;
     background-color: #0275d8;
-    border-radius: 8px;   
+    box-shadow: 0 8px 8px rgba(58, 58, 58, 0.075);
+    border-radius: 8px;
+    transition: 0.3s;   
+}
+
+#update-data:hover, 
+#create-data:hover {
+    background-color: #0057a3;
+}
+
+/* ------ */
+.section-about-us {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-grow: 1; /* Allow the container to grow to fill available space */
+}
+
+header {
+    background-color: var(--background-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+main {
+    flex-grow: 1; /* Allow the main content area to grow to fill available space */
+}
+
+#section-1 {
+    margin-bottom: 24px;
+    /* background-color: black; */
+}
+
+#section-2 {
+    /* height: 100%; */
+    margin-top: 10%;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+section p {
+    margin-top: 14px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+.team-members {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.2); /* Scale the image by 10% on hover */
+}
+
+.team-member h3 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.team-member p {
+    margin: 0;
+    color: #666;
+}
+
+footer {
+    width: 100%;
+    margin: 40px 0 0;
+    background-color: var(--background-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+    z-index: 0;
+}
+
+
+/* ------------ */
+
+.alert,
+.success {
+    width: 890px;
+    position: fixed;
+    padding: 20px;
+    color: var(--white-color);
+    border-radius: 8px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.alert {
+    background-color: #f44336;
+}
+
+.success {
+    background-color: #00a149;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: var(--white-color);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+} 
+  
+.closebtn:hover {
+    color: #828282;
 }
