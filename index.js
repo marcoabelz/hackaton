@@ -85,6 +85,10 @@ function updateData() {
     }
   }
 
+  if (newA.length) {
+    document.getElementById("success").style.display = "block";
+  }
+
   listMovies(newA);
   titleSelector.value = "";
   categorySelector.value = "";
@@ -123,7 +127,8 @@ function createMovie() {
     !trailerValue ||
     !imageValue
   ) {
-    alert("Mohon mengisi data yang kosong");
+    // alert("Mohon mengisi data yang kosong");
+    document.getElementById("alert").style.display = "block";
   } else {
     let tempObj = {
       id: datas[datas.length - 1].id + 1,
@@ -183,13 +188,12 @@ function listMovies(movies) {
       <div class="card-body">
         <h3 id="title" class="card-body-title">${name}</h3>
         <div class="card-group">
-          <span id="year" class="card-body-year">${year}</span><span> | </span
-          ><span id="category" class="card-body-category">${category}</span>
+          <span id="year" class="card-body-year">${year}</span><span id="category" class="card-body-category">${category}</span>
         </div>
         <p id="description" class="card-body-desc">
           ${description}
         </p>
-        <p id="actors" class="card-body-actor">${actors}</p>
+        <p id="actors" class="card-body-actor">Pemeran: ${actors}</p>
       </div>
     </div>
     <div class="buttons">
@@ -201,10 +205,10 @@ function listMovies(movies) {
       >
         <i class="bx bx-play-circle"></i>Watch Trailer
       </a>
-      <button onclick="editMovie(${id}), showUpdate()" href="" class="btn-edit">
+      <button onclick="editMovie(${id}), showUpdate()" href="#main-container" class="btn-edit">
         <i class="bx bx-edit-alt"></i>Edit
       </button>
-      <button onclick="deleted(${id})" href="" class="btn-delete">
+      <button onclick="deleted(${id})" href="#main-container" class="btn-delete">
         <i class="bx bx-trash"></i>Delete
       </button>
     </div>
@@ -233,6 +237,9 @@ function findMovies() {
   listMovies(result);
 }
 
+function alertModal() {
+  
+}
 //Reset
 function reset() {
   if (newDatas === null) {
@@ -275,16 +282,43 @@ function deleted(id) {
 function hideDashboard() {
   document.getElementById("add-movie-page").style.display = "block";
   document.getElementById("main-container").style.display = "none";
+  document.getElementById("section-about-us").style.display = "none";
+
 
   document.getElementById("title-header").innerHTML = "Add Movie";
   document.getElementById("create-data").style.display = "block";
   document.getElementById("update-data").style.display = "none";
+
+  let titleSelector = document.getElementById("input-title");
+  let categorySelector = document.getElementById("input-category");
+  let yearSelector = document.getElementById("input-year");
+  let castSelector = document.getElementById("input-cast");
+  let descSelector = document.getElementById("input-desc");
+  let trailerSelector = document.getElementById("input-trailer");
+  let imageSelector = document.getElementById("input-link-img");
+
+  // let idValue = Number(idSelector.value);
+  titleSelector.value = "";
+  categorySelector.value = "";
+  yearSelector.value = "";
+  castSelector.value = "";
+  descSelector.value = "";
+  trailerSelector.value = "";
+  imageSelector.value = "";
 }
 
 // Change to Dashboard
 function hideAddMovie() {
   document.getElementById("main-container").style.display = "block";
   document.getElementById("add-movie-page").style.display = "none";
+  document.getElementById("section-about-us").style.display = "none";
+}
+
+// Change to About Us
+function showAboutUs() {
+  document.getElementById("section-about-us").style.display = "block";
+  document.getElementById("add-movie-page").style.display = "none";
+  document.getElementById("main-container").style.display = "none";
 }
 
 // Change to Update Movie
